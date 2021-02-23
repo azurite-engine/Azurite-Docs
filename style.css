@@ -238,3 +238,45 @@ code {
     text-align: center;
     font-size: 32px;
 }
+
+/* Footer */
+
+.footer {
+    height: 125px;
+}
+
+.footer .container {
+    max-width: 95%;
+    border-top: 1px lightgray solid;
+}
+
+.footer h1 {
+    padding-top: 12px;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.footer .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.footer .flexbox {
+    justify-content: center;
+}
+
+.footer a {
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+.footer li {
+    margin-top: 20px;
+}
+
+.footer a:hover {
+    border-bottom: 3px #333333 solid;
+}
