@@ -219,6 +219,10 @@ code {
     height: 300px;
     width: 100%;
     overflow: visible;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .welcome h1 {
