@@ -264,6 +264,7 @@ code {
 
 .footer .flexbox {
     justify-content: center;
+    float: right;
 }
 
 .footer a {
