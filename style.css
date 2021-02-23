@@ -60,9 +60,13 @@ code {
 }
 
 .navbar {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
     background-color: white;
     color: cornflowerblue;
     height: 69px; /* haha 69 funny */
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar .flexbox {
@@ -214,8 +218,9 @@ code {
 /* Welcome Area */
 
 .welcome {
+    
     background-color: cornflowerblue;
-    height: 300px;
+    height: 500px;
     width: 100%;
     user-select: none;
     -webkit-user-select: none;
@@ -228,7 +233,7 @@ code {
     color: white;
     font-size: 64px; /* Minecraft Number xD */
     margin: 0px;
-    padding-top: 50px;
+    padding-top: 200px;
 }
 
 .welcome p {
