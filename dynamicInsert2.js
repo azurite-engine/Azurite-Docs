@@ -43,13 +43,15 @@ let footer = `
 <footer class="footer">
     <div class="container grid">
         <div class="logo">
-            <h1>Azurite <span>Docs</span></h1>
+            <h1>Azurite <span>Engine</span></h1>
             <p>Copyright &copy; 2021 MIT License</p>
         </div>
         <nav>
             <ul class="flexbox">
-                <li><a href="index.html">Docs</a></li>
-                <li><a href="tutorials-main.html">Tutorials</a></li>
+                <li><a href="https://discord.gg/dhyV3BXkRZ" target="_blank">Discord</a></li>
+                <li><a href="https://github.com/Games-With-Gabe-Community" target="_blank">Github</a></li>
+                <li><a href="https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw" target="_blank">YouTube</a></li>
+                
             </ul>
         </nav>
     </div>
