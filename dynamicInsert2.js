@@ -1,9 +1,7 @@
-function add (selector, html) {
-    document.querySelector(selector).innerHTML += html;
-    console.log("Insert: \n" + html);
-}
-
-let sidenav = `
+/** 
+ * Contains the links that are inserted into the HTML on load.
+ */
+let legend = `
 
     <h3>Section</h3>
     <nav>
@@ -22,7 +20,13 @@ let sidenav = `
 
 `;
 
-add('.legend-card', sidenav);
+function add (selector, html) {
+    document.querySelector(selector).innerHTML += html;
+    console.log("Insert: \n" + html);
+}
+
+
+add('.legend-card', legend);
 
 
 function toggleDark () {
