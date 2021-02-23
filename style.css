@@ -115,7 +115,6 @@ code {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
     overflow: auto;
-    max-height: 1000px;
     margin: 30px 0px;
 }
 
@@ -218,7 +217,6 @@ code {
     background-color: cornflowerblue;
     height: 300px;
     width: 100%;
-    overflow: visible;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -266,6 +264,7 @@ code {
 
 .footer .flexbox {
     justify-content: center;
+    float: right;
 }
 
 .footer a {
@@ -279,4 +278,116 @@ code {
 
 .footer a:hover {
     border-bottom: 3px #333333 solid;
+}
+
+/* Tablet Or Other */
+
+@media(max-width: 1200px) {
+    .welcome h1 {
+        font-size: 48px;
+        padding-bottom: 20px;
+    }
+    
+    .welcome p {
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 869px) {
+    .documentation {
+        top: -75px;
+    }
+}
+
+@media(max-width: 750px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flexbox {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .documentation {
+        top: -69px;
+    }
+
+    .welcome {
+        height: 250px;
+    }
+
+    .welcome h1 {
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .welcome p {
+        font-size: 18px;
+        padding: 0px;
+    }
+
+    .legend-card {
+        width: 75%;
+        margin: 0px auto;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+}
+
+/* Phone */
+
+@media(max-width: 512px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flexbox {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .documentation {
+        top: -30px;
+    }
+
+    .welcome {
+        height: 200px;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+        padding: 20px;
+    }
+
+    .welcome p {
+        font-size: 18px;
+        padding-top: 0px;
+    }
+
+    .legend-card {
+        width: 75%;
+        margin: 0px auto;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
 }
