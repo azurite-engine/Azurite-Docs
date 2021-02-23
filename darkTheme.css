@@ -1,5 +1,9 @@
-/* body {
+body {
     background: #1D1D1D;
+}
+
+a {
+    color: white;
 }
 
 .footer {
@@ -16,4 +20,35 @@
 
 .navbar {
     background: #323232;
-} */
+    color: rgb(149, 179, 255);
+}
+
+.card {
+    background: rgb(33, 33, 33);
+    color: white;
+}
+
+.legend-card {
+    background: #2D2D2D;
+    color: white;
+}
+
+.legend-card li {
+    border-bottom: 1px #616161 solid;
+}
+
+pre {
+    background: #2D2D2D;
+    border: none;
+}
+
+.warn, .info, .button {
+    color: black;
+    font-weight: 600;
+}
+
+code {
+    color: white;
+    background: #2D2D2D;
+    border-color: #444444;
+}

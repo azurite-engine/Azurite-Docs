@@ -5,6 +5,8 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
+    transition: color 0.2s; 
+    transition: background 0.2s; 
 }
 
 body {
@@ -86,6 +88,7 @@ code {
 .navbar a:hover {
     border-bottom: 3px cornflowerblue solid;
 }
+
 
 /* Utils */
 
@@ -194,6 +197,7 @@ code {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    transition: all 0.2s;
 }
 
 .button:hover {
@@ -208,6 +212,7 @@ code {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    transition: all 0.2s;
 }
 
 .legend-card li {
@@ -396,3 +401,131 @@ code {
         font-size: 14px;
     }
 }
+
+
+/* CODE BLOCK */
+.code {
+  display: block;
+  max-height: 500px;
+  width: 100%;
+  margin: 20px 0;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 23px;
+  position: relative;
+  overflow: auto
+}
+
+.code .numbers, .code .source { float: left }
+
+.code .numbers {
+  padding: 10px;
+  text-align: right
+}
+
+.code .source { padding: 10px 0 }
+.code .source .line:nth-child(2n) { }
+.code .source .line { padding: 0 10px }
+.code .source .comment { font-style: italic }
+
+.code .copy {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* 
+Syntax highlighting
+Credit to Romgerman on codepen for the syntax highlighting
+https://codepen.io/romgerman/pen/xOZrZB
+*/
+
+.code-style-dark {
+    color: #E6E6E6;
+    background: #2D2D2D;
+    border-radius: 5px;
+}
+.code-style-dark .numbers {
+    color: rgb(255, 255, 255);
+    background: rgb(46, 46, 46);
+}
+
+.code-style-dark .source .line:nth-child(2n) {
+    background: rgba(0, 0, 0, 0.05)
+}
+.code-style-dark .source .comment {
+    color: #6585a0
+}
+
+.code-style-dark .source .sharp-keywords {
+    color: #DF5D6E
+}
+.code-style-dark .source .sharp-default-types {
+    color: #718DBD
+}
+
+
+/* Switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #6495ED;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #6495ED;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
