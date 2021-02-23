@@ -1,2 +1,2 @@
 # Azurite Docs
-Documentation website for [Azurite](https://games-with-gabe-community.github.io/Azurite-Docs/) Engine
+Documentation website for [Azurite](https://github.com/Games-With-Gabe-Community/Azurite) Engine
