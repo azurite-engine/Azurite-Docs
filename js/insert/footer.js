@@ -1,6 +1,5 @@
 function add (selector, html) {
     document.querySelector(selector).innerHTML += html;
-    console.log("Insert: \n" + html);
 }
 
 let footer = `
@@ -17,16 +16,12 @@ let footer = `
                 <li><a href="https://github.com/Games-With-Gabe-Community" target="_blank">Github</a></li>
                 <li><a href="https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw" target="_blank">YouTube</a></li>
 
-
-
-                <h3>Dark Theme</h3>
-                <label class="switch">
-                <input type="checkbox" id="dark" onclick="toggleDark()">
-                <span class="slider round"></span>
-                </label>
-
-
-
+                
+                <li><label class="switch tooltip">                
+                    <input type="checkbox" id="dark" onclick="toggleDark()">
+                    <span class="slider round"></span>
+                    <span class="tooltiptext">Dark Mode</span>
+                </li></label>             
             </ul>
         </nav>
     </div>
@@ -38,7 +33,22 @@ add("body", footer);
 function toggleDark () {
     if (document.querySelector("#dark").checked) {
         add("head", '<link id="darkThemeImport" href="darkTheme.css" rel="stylesheet" type="text/css">');
+        localStorage.setItem("darkreader", "enabled");
     } else {
         document.querySelector('#darkThemeImport').remove();
+        localStorage.setItem("darkreader", "disabled");
     }
 }
+
+function checkDarkPreferences () {
+    if (localStorage.getItem("darkreader") == "enabled") {
+        add("head", '<link id="darkThemeImport" href="darkTheme.css" rel="stylesheet" type="text/css">');
+        document.querySelector("#dark").checked = true;
+        console.log("User preference dark mode enabled");
+    } else {
+        // document.querySelector('#darkThemeImport').remove();
+        console.log("User preference dark mode disabled");
+    }
+}
+
+window.onload = checkDarkPreferences;

@@ -5,14 +5,21 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    transition: color 0.2s; 
-    transition: background 0.2s; 
+}
+
+html {position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Roboto';
     color: #333333;
     line-height: 1.6;
+    min-height: 100%;
+    margin: 0 0 200px;
+    
 }
 
 ul {
@@ -95,7 +102,7 @@ code {
 /* Utils */
 
 .container {
-    max-width: 1069px; /* LoL I need to stop */
+    max-width: 1479px; /* LoL I need to stop */
     margin: 0px auto;
     overflow: auto;
     padding: 0px 31px;
@@ -262,11 +269,33 @@ code {
 
 .footer {
     height: 125px;
+    margin-bottom: 0px;
+    width: 100%;
+    /* position: fixed;
+    bottom: 0;
+    margin-bottom: 20px; */
+
+    /* background-color: orange; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.footer:before {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 95%; /* Change this to whatever width you want. */
+    padding-bottom: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid lightgray; /* This creates the border. Replace black with whatever color you want. */
 }
 
 .footer .container {
-    max-width: 95%;
-    border-top: 1px lightgray solid;
+    /* max-width: 95%; */
+    
 }
 
 .footer h1 {
@@ -539,3 +568,34 @@ https://codepen.io/romgerman/pen/xOZrZB
   .slider.round:before {
     border-radius: 50%;
   }
+
+/* Tooltip */
+
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    display: none;
+    width: 120px;
+    background-color: rgb(92, 92, 92);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    bottom: 60px;
+    margin-left:-30px;
+    position: fixed;
+    z-index: 1;
+    
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    display: block;
+}
+
+
+
+
+
+
+  

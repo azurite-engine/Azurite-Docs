@@ -2,7 +2,6 @@
 
 function add (selector, html) {
     document.querySelector(selector).innerHTML += html;
-    console.log("Insert: \n" + html);
 }
 
 let welcomeHeader = `
