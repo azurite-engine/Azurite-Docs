@@ -11,7 +11,12 @@
         <!-- Insert the top navigation bar and welcome header -->
         <script src="js/insert/navbar.js"></script>
         <!-- Insert the top navigation bar and welcome header -->
-        <script src="js/insert/headerDocs.js"></script>
+        <script src="js/insert/header.js"></script>
+
+        <script>
+            // Change these to the title of the documentation topic/item
+            setHeader("Contributors", "Engine & docs");
+        </script>
 
         <!-- Documentation -->
         <div class="documentation">
@@ -19,11 +24,9 @@
                 <!-- Documentation Legend -->
                 <div class="legend-card"></div>
                 <!-- Documentation Content -->
-                <div class="card">
-                    <div class="title">Authors</div>
-
-                    <p>Tree - Light Theme and site design.</p>
-                    <p>Asher - Dark theme and JS</p>
+                <div class="card" id="con">
+                    <script src="js/insert/contributors.js"></script>
+                    <script>loadContributors();</script>
                 </div>
             </div>
         </div>

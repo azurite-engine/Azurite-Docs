@@ -11,8 +11,13 @@
         <!-- Insert the top navigation bar and welcome header -->
         <script src="js/insert/navbar.js"></script>
         <!-- Insert the top navigation bar and welcome header -->
-        <script src="js/insert/headerDocs.js"></script>
+        <script type="text/javascript" src="js/insert/header.js"></script>
 
+        <script>
+            // Change these to the title of the documentation topic/item
+            setHeader("Welcome to the Azurite Docs!", "Select a topic to view its documentation.");
+        </script>
+        
         <!-- Documentation -->
         <div class="documentation">
             <div class="container grid" id="docs">
@@ -21,7 +26,6 @@
 
                 <!-- Documentation Content -->
                 <div class="card">
-                    <div class="title">Introduction to the Azurite Docs</div>
                     <h3>Title</h3>
                     <h4>Subtitle</h4>
                     <div class="warn">Warning</div>

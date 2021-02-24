@@ -7,7 +7,7 @@ let legend = `
     <ul>
         <!-- Pages -->
         <li><a href="index.html">Introduction</a></li>
-        <li><a href="authors.html">Authors</a></li>
+        <li><a href="contributors.html">Contributors</a></li>
     </ul>
 </nav>
 

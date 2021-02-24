@@ -44,10 +44,10 @@ function checkDarkPreferences () {
     if (localStorage.getItem("darkreader") == "enabled") {
         add("head", '<link id="darkThemeImport" href="darkTheme.css" rel="stylesheet" type="text/css">');
         document.querySelector("#dark").checked = true;
-        console.log("User preference dark mode enabled");
+        // console.log("User preference dark mode enabled");
     } else {
         // document.querySelector('#darkThemeImport').remove();
-        console.log("User preference dark mode disabled");
+        // console.log("User preference dark mode disabled");
     }
 }
 

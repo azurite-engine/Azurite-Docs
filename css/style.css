@@ -265,6 +265,12 @@ code {
     font-size: 32px;
 }
 
+/* Contributors page */
+#con li {
+    list-style: circle;
+    margin-left: 30px;
+}
+
 /* Footer */
 
 .footer {

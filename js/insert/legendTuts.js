@@ -7,7 +7,7 @@ let legend = `
 <nav>
     <ul>
         <!-- Pages -->
-        <li><a href="tutorials-main.html">How tutorials look like</a></li>
+        <li><a href="tutorials-main.html">Introduction</a></li>
         <li><a href="set-a-project.html">Setting up a project</a></li>
     </ul>
 </nav>
