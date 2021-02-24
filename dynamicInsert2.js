@@ -3,12 +3,21 @@
  */
 let legend = `
 
-    <h3>Section</h3>
+    <h3>About Documentation</h3>
     <nav>
         <ul>
             <!-- Pages -->
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Page 1</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Page 2</a></li>
+            <li><a href="index.html">How documentation looks like</a></li>
+            <li><a href="authors.html">Authors</a></li>
+        </ul>
+    </nav>
+
+    <h3>Working In Azurite</h3>
+    <nav>
+        <ul>
+            <!-- Pages -->
+            <li><a href="how-engine-works.html">How the engine works</a></li>
+            <li><a href="structure.html">Structure of Azurite</a></li>
         </ul>
     </nav>
     <br>

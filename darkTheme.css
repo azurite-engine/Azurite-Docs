@@ -15,7 +15,11 @@ a {
 }
 
 .footer .container { 
-    border-top: 1px solid rgb(73, 73, 73);
+    border-top: 1px rgb(73, 73, 73) solid;
+}
+
+.documentation .title {
+    border-bottom: 1px rgb(73, 73, 73) solid;
 }
 
 .navbar {
@@ -55,4 +59,8 @@ code {
     color: white;
     background: #2D2D2D;
     border-color: #444444;
+}
+
+.documentation .title {
+    color: white;
 }

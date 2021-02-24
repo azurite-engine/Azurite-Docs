@@ -85,6 +85,7 @@ code {
     color: cornflowerblue;
     padding: 10px;
     margin: 0px 15px;
+    transition: all 0.2s;
 }
 
 .navbar a:hover {
@@ -128,8 +129,9 @@ code {
 }
 
 .grid {
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
     gap: 20px;
 }
 
@@ -185,6 +187,15 @@ code {
 
 .card p {
     margin: 15px 0px;
+}
+
+.documentation .title {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 1px lightgray solid;
+    color: #333333;
 }
 
 .button {
@@ -282,6 +293,7 @@ code {
 .footer a {
     margin: 0px 10px;
     padding: 10px;
+    transition: all 0.2s;
 }
 
 .footer li {
@@ -399,8 +411,16 @@ code {
         margin: 0px auto;
     }
 
+    .footer {
+        height: 150px;
+    }
+
     .footer p {
         font-size: 14px;
+    }
+
+    .footer ul {
+        flex-direction: column;
     }
 }
 
