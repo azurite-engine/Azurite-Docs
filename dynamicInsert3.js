@@ -1,4 +1,4 @@
-//Inserter for documentation website
+//Inserter for tutorial website
 
 function add (selector, html) {
     document.querySelector(selector).innerHTML += html;
@@ -28,8 +28,8 @@ add("body", navbar);
 let welcomeHeaderDocs = `
 <!-- Welcome Sign -->
 <div class="welcome">
-    <h1>Welcome To The Azurite Documentation</h1>
-    <p>Select a page to see it's documentation.</p>
+    <h1>Welcome To The Azurite Tutorials</h1>
+    <p>Select a topic to see it's explanation.</p>
 </div>
 `;
 

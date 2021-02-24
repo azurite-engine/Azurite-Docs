@@ -1,14 +1,14 @@
 /** 
- * Contains the links that are inserted into the HTML on load for documentation website
+ * Contains the links that are inserted into the HTML on load for tutorials website
  */
 let legend = `
 
-    <h3>Section</h3>
+    <h3>Tutorials</h3>
     <nav>
         <ul>
             <!-- Pages -->
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Page 1</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Page 2</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Tutorial 1</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Tutorial 2</a></li>
         </ul>
     </nav>
     <br>

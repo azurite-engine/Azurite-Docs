@@ -426,7 +426,6 @@ code {
 }
 
 .code .source { padding: 10px 0 }
-.code .source .line:nth-child(2n) { }
 .code .source .line { padding: 0 10px }
 .code .source .comment { font-style: italic }
 
