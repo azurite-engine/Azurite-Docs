@@ -6,7 +6,7 @@ let legend = `
     <h3>Section</h3>
     <nav>
         <ul>
-            <!-- Rick rolls (pages) -->
+            <!-- Pages -->
             <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Page 1</a></li>
             <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Page 2</a></li>
         </ul>

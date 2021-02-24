@@ -41,7 +41,9 @@ code {
     background-color: #E4E4E4;
     padding: 3px;
     border-radius: 5px;
-    border: 1px #CCCCCC solid;
+    border: 1px #444444 solid;
+    color: white;
+    background-color: #2D2D2D;
 }
 
 /* Navigation Bar */
@@ -332,12 +334,12 @@ code {
     }
 
     .welcome {
-        height: 250px;
+        height: 400px;
     }
 
     .welcome h1 {
         font-size: 40px;
-        padding: 20px;
+        padding-top: 150px;
     }
 
     .welcome p {
@@ -379,12 +381,12 @@ code {
     }
 
     .welcome {
-        height: 200px;
+        height: 350px;
     }
 
     .welcome h1 {
         font-size: 32px;
-        padding: 20px;
+        padding-top: 150px;
     }
 
     .welcome p {
