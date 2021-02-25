@@ -10,6 +10,7 @@ let ec = [
 let dc = {
     Tree : "Light theme, site design, documentation author",
     Asher : "Dark theme, JS, documentation author",
+    Carson : "CSS animations, layout tweaks"
 };
 
 // Credits
