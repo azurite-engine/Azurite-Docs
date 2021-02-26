@@ -32,7 +32,7 @@ let navbar = `
 <div class="navbar">
     <div class="container flexbox">
         <div class="logo">
-            <h1><a href="index.html">Azurite <span>Docs</span></a></h1>
+            <h1><a href="${lp}/index.html">Azurite <span>Docs</span></a></h1>
         </div>
         <nav>
             <ul>
