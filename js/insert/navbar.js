@@ -12,8 +12,8 @@ let navbar = `
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Docs</a></li>
-                <li><a href="tutorials-main.html">Tutorials</a></li>
+                <li><a href="/index.html">Docs</a></li>
+                <li><a href="/tutorials/tutorials.html">Tutorials</a></li>
                 <li><a href="https://games-with-gabe-community.github.io/azurite-javadocs/" target="_blank">Javadocs</a></li>
             </ul>
         </nav>

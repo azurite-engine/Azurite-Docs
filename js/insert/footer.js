@@ -32,7 +32,7 @@ add("body", footer);
 
 function toggleDark () {
     if (document.querySelector("#dark").checked) {
-        add("head", '<link id="darkThemeImport" href="darkTheme.css" rel="stylesheet" type="text/css">');
+        add("head", '<link id="darkThemeImport" href="/css/darkTheme.css" rel="stylesheet" type="text/css">');
         localStorage.setItem("darkreader", "enabled");
     } else {
         document.querySelector('#darkThemeImport').remove();
@@ -42,7 +42,7 @@ function toggleDark () {
 
 function checkDarkPreferences () {
     if (localStorage.getItem("darkreader") == "enabled") {
-        add("head", '<link id="darkThemeImport" href="darkTheme.css" rel="stylesheet" type="text/css">');
+        add("head", '<link id="darkThemeImport" href="/css/darkTheme.css" rel="stylesheet" type="text/css">');
         document.querySelector("#dark").checked = true;
         // console.log("User preference dark mode enabled");
     } else {

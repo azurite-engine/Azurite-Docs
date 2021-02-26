@@ -55,7 +55,7 @@
         margin: 0 0 190px;
     }
     
-    ul {
+    ul:not(.card>ul){
         list-style-type: none;
     }
     
@@ -260,6 +260,11 @@
     .card p {
         margin: 15px 0px;
     }
+
+    .card li {
+        list-style: none;
+        margin-left: 15px;
+    }
     
     .button {
         background-color: cornflowerblue;
@@ -297,7 +302,6 @@
 
     .legend-card a {
         transition: all 0.2s;
-        margin: 5px 5px;
         color: cornflowerblue;
     }
     

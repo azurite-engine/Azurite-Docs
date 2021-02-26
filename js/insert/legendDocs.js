@@ -6,8 +6,9 @@ let legend = `
 <nav>
     <ul>
         <!-- Pages -->
-        <li><a href="index.html">Introduction</a></li>
-        <li><a href="contributors.html">Contributors</a></li>
+        <li><a href="/index.html">Introduction</a></li>
+        <li><a href="/docs/contributing.html">Contributing</a></li>
+        <li><a href="/docs/contributors.html">Contributors</a></li>
     </ul>
 </nav>
 
@@ -15,8 +16,8 @@ let legend = `
 <nav>
     <ul>
         <!-- Pages -->
-        <li><a href="how-engine-works.html">How the engine works</a></li>
-        <li><a href="structure.html">Structure of Azurite</a></li>
+        <li><a href="/docs/how-engine-works.html">How the engine works</a></li>
+        <li><a href="/docs/structure.html">Structure of Azurite</a></li>
     </ul>
 </nav>
 `;
