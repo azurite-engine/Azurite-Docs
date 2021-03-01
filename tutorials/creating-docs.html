@@ -30,9 +30,9 @@
             <!-- Documentation Content -->
             <div class="card">
                 <h3>How to create docs</h3>
-                <p>This docs are in fact open source, which means that you can create your own pages and pull them into the repository. But with very little knowledge about structure of this page it can be hard to know what goes where. The goal of this tutorial is to learn you how to make pages to the docs.</p>
+                <p>These docs are open source, which means that you can create your own pages and pull them into the repository. But with very little knowledge about structure of this site it can be hard to know what goes where. The goal of this tutorial is to help you learn how to create new pages.</p>
 
-                <div class="info">At least basic knowledge about HTML is required to know how everything works.</div>
+                <div class="info">At least basic knowledge of HTML is required to follow this tutorial.</div>
 
                 <h3>Structure of the page</h3>
                 <p>This page consists of a few important folders that you should know. The most important <code>tutorials</code> and <code>docs</code> folders. You should store the pages in them.</p>
@@ -43,25 +43,29 @@
                 <p>For every page that we write we use already developed syntax. This page uses combination of classes assigned to <code>div</code> and <code>a</code> tags and HTML tags such as <code>h3</code>. Here's what everything does:</p>
                 <ul>
                     <li>
-                        DIV
+                        <code>div</code>
                         <ul>
-                            <li><code>class="info"</code> points out some important information.</li>
-                            <li><code>class="warn"</code> indicates that some action may or may not introduce an error.</li>
-                            <li><code>class="danger"</code> indicates that something will introduce an error.</li>
+                            <li><code>class="info"</code> - An Information tag, communicates important information that may otherwise be overlooked.
+                            </li>
+                            <li><code>class="warn"</code> - A warning tag, indicates that caution should be used.
+                            </li>
+                            <li><code>class="danger"</code> - A danger tag, warns that an action may cause serious problems.</li>
                         </ul>
                     </li>
                     <li>
-                        A
+                        <code>a</code>
                         <ul>
                             <li><code>class="button"</code> creates a clickable button.</li>
-                            <li><code>without class</code> creates a clickable link</li>.
+                            <li><code>without class</code> creates a clickable link.</li>
                         </ul>
                     </li>
                     <li><code>h3</code> is a title.</li>
                     <li><code>h2</code> is a subtitle.</li>
                     <li><code>p</code> is a paragraph.</li>
                     <li><code>code</code> is an inline code without syntax highlighting.</li>
-                    <li><code>pre</code> is a multi-line code with syntax highlighting and line numbering.</li>
+                    <li><code>pre</code> is a multi-line code snipper with line numbering.<ul>
+                            <li><code>class="syntax-java"</code> Adds syntax highlighting for Java snippets</li>
+                        </ul></li>
                 </ul>
 
                 <h3>Writing a page</h3>
@@ -76,15 +80,20 @@
 <!-- Rest of the page -->
 </pre>
 
-                <h3>Adding header</h3>
-                <p>You probably realized that at the top of the page there is a big lightblue thing. It's called a header and you can add whatever text you want to it. It's very simple</p>
-                <p>On top of the documentation DIV there is a <code>script</code> tag. In it you have a <code>setHeader</code> function. The arguments of it is your bit of text you want to put there.</p>
-                <p>After putting your bit of text there you should have your custom header.</p>
+                <h3>Setting the header</h3>
+                <p>On top of the documentation DIV there is a <code>script</code> tag containing a call to a function that will set the header text. The first parameter should be the article title, and the second parameter is an optional description, leave it blank if the title is self explanatory.
+                <pre class="syntax-java">
+// Change these to the title of the documentation topic/item
+setHeader("How to use the ECS", "Entity Component System.");
+                </pre>
+
 
                 <h3>Adding it to the legend</h3>
-                <p>After writing your page there is just one more thing left to do. Right now, when people try to visit your page...<br> The can't. As you probably realized all of the page are in the left gray thing, we call it legend. Adding the page to it is fairly simple and consists of these simple steps.</p>
-                <p>First open the <code>js/insert/legendDocs.js</code> or <code>js/insert/legendTuts.js</code> file (depends on what kind of page are you writing). As you by now probably realized, there is a <code>legend</code> variable and in it there is a HTML code for a legend.</p>
-                <p>There you can create new categories by using <code>h3</code> tag or just adding new pages to already existing one. Make a new list element with a <code>li</code> tag, inside of it put <code>a</code> tag leading to the page. But do not forgot about the <code>${lp}</code> element, it's critical for page to recognize this page.</p>
+                <p>After creating your page there is just one more thing to do. As you probably realized all of the pages are listed in the side navigation on the left, called the legend.</p>
+                <p>First open the <code>js/insert/legendDocs.js</code> or <code>js/insert/legendTuts.js</code> file (depends on what kind of page are you writing). There is a <code>legend</code> variable containing the HTML code for the legend.</p>
+                <p>If necessary, you can create new categories by using <code>h3</code> tag, or just add your pages to existing categories.<br>
+                Make a new list element with a <code>li</code> tag, inside of it put <code>a</code> tag leading to the page you just created. <br>
+                <div class="warn">In the legend, it is critical to use root paths to your page, not relative paths. Also, do not forgot about the <code>${lp}</code> element, it appends the correct base URL depending where the page is being accessed from.<br>A good link will look similar to this: <code>&lt;li&gt;&lt;a href="${lp}/docs/blob.html">Blob&lt;/a&gt;&lt;/li&gt;</code></div></p>
                 <p>After all of that your legend variable should look like this:</p>
                 <pre class="syntax-java">
 let legend = `
@@ -92,17 +101,18 @@ let legend = `
 <nav>
     <ul>
         <!-- Pages -->
-        <li><a href="${lp}/tutorials/tutorials.html">Some page</a></li>
-        <li><a href="${lp}/tutorials/set-a-project.html">Your page</a></li>
+        <li><a href="${lp}/docs/bar.html">Bar</a></li>
+        <li><a href="${lp}/docs/foo.html">Foo</a></li>
+        <li><a href="${lp}/docs/blob.html">Blob</a></li>
     </ul>
 </nav>
-<!-- Rest of the variable -->
+// Rest of the legend code
 `;
 </pre>
 
                 <h3>Summary</h3>
                 <p>You've done it. You created your own documentation or tutorials page. Now you can pull it to the <code>main</code> branch of the repository.</p>
-                <p>From all of the Azurite-Docs contributors we all thank you for your willingness to create with us the Azurite Docs and being part of Azurite Engine community.</p>
+                <p>From all of the Azurite-Docs contributors we all thank you for your willingness to contribute to the Azurite Docs and for being part of the Azurite Engine community.</p>
             </div>
         </div>
     </div>
