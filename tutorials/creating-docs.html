@@ -18,7 +18,7 @@
 
     <script>
         // Change these to the title of the documentation topic/item
-        setHeader("How to create docs!", "Easy to follow guide.");
+        setHeader("How to create docs!", "");
     </script>
 
     <!-- Documentation -->
@@ -68,7 +68,7 @@
                 <p>So finally after all of that we can move into writing your own page.</p>
                 <p>After explaining the syntax, there isn't actually that much to this, but you have to remember one very important thing. Always put your page's content inside the DIV with a <code>card</code> class.</p>
                 <p>So your page should like this:</p>
-                <pre>
+                <pre class="syntax-html">
 <!-- Header etc. -->
 <div class="card">
     <!-- Documentation content -->
@@ -86,7 +86,7 @@
                 <p>First open the <code>js/insert/legendDocs.js</code> or <code>js/insert/legendTuts.js</code> file (depends on what kind of page are you writing). As you by now probably realized, there is a <code>legend</code> variable and in it there is a HTML code for a legend.</p>
                 <p>There you can create new categories by using <code>h3</code> tag or just adding new pages to already existing one. Make a new list element with a <code>li</code> tag, inside of it put <code>a</code> tag leading to the page. But do not forgot about the <code>${lp}</code> element, it's critical for page to recognize this page.</p>
                 <p>After all of that your legend variable should look like this:</p>
-                <pre>
+                <pre class="syntax-java">
 let legend = `
 <h3>Category</h3>
 <nav>
