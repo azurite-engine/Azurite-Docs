@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azurite Documentation</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="../js/getBaseURL.js"></script>
+</head>
+
+<body>
+    <!-- Insert the top navigation bar and welcome header -->
+    <script src="../js/insert/navbar.js"></script>
+    <!-- Insert the top navigation bar and welcome header -->
+    <script type="text/javascript" src="../js/insert/header.js"></script>
+
+    <script>
+        // Change these to the title of the documentation topic/item
+        setHeader("How to create docs!", "Easy to follow guide.");
+    </script>
+
+    <!-- Documentation -->
+    <div class="documentation">
+        <div class="container grid contentparent" id="docs">
+            <!-- Documentation Legend -->
+            <div class="legend-card"></div>
+
+            <!-- Documentation Content -->
+            <div class="card">
+                <h3>How to create docs</h3>
+                <p>This docs are in fact open source, which means that you can create your own pages and pull them into the repository. But with very little knowledge about structure of this page it can be hard to know what goes where. The goal of this tutorial is to learn you how to make pages to the docs.</p>
+
+                <div class="info">At least basic knowledge about HTML is required to know how everything works.</div>
+
+                <h3>Structure of the page</h3>
+                <p>This page consists of a few important folders that you should know. The most important <code>tutorials</code> and <code>docs</code> folders. You should store the pages in them.</p>
+                The <code>images</code> folder has images that are used in the pages, remember to store all of the used images in there.</p>
+                <p>And the <code>css</code> and <code>js</code> folders. The <code>css</code> folder is probably the least useful thing, because you don't need to know CSS syntax to program these pages. But <code>js</code> folder is more important than you probably would think. We will come back to it later.</p>
+
+                <h3>Elements</h3>
+                <p>For every page that we write we use already developed syntax. This page uses combination of classes assigned to <code>div</code> and <code>a</code> tags and HTML tags such as <code>h3</code>. Here's what everything does:</p>
+                <ul>
+                    <li>
+                        DIV
+                        <ul>
+                            <li><code>class="info"</code> points out some important information.</li>
+                            <li><code>class="warn"</code> indicates that some action may or may not introduce an error.</li>
+                            <li><code>class="danger"</code> indicates that something will introduce an error.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        A
+                        <ul>
+                            <li><code>class="button"</code> creates a clickable button.</li>
+                            <li><code>without class</code> creates a clickable link</li>.
+                        </ul>
+                    </li>
+                    <li><code>h3</code> is a title.</li>
+                    <li><code>h2</code> is a subtitle.</li>
+                    <li><code>p</code> is a paragraph.</li>
+                    <li><code>code</code> is an inline code without syntax highlighting.</li>
+                    <li><code>pre</code> is a multi-line code with syntax highlighting and line numbering.</li>
+                </ul>
+
+                <h3>Writing a page</h3>
+                <p>So finally after all of that we can move into writing your own page.</p>
+                <p>After explaining the syntax, there isn't actually that much to this, but you have to remember one very important thing. Always put your page's content inside the DIV with a <code>card</code> class.</p>
+                <p>So your page should like this:</p>
+                <pre>
+<!-- Header etc. -->
+<div class="card">
+    <!-- Documentation content -->
+</div>
+<!-- Rest of the page -->
+</pre>
+
+                <h3>Adding header</h3>
+                <p>You probably realized that at the top of the page there is a big lightblue thing. It's called a header and you can add whatever text you want to it. It's very simple</p>
+                <p>On top of the documentation DIV there is a <code>script</code> tag. In it you have a <code>setHeader</code> function. The arguments of it is your bit of text you want to put there.</p>
+                <p>After putting your bit of text there you should have your custom header.</p>
+
+                <h3>Adding it to the legend</h3>
+                <p>After writing your page there is just one more thing left to do. Right now, when people try to visit your page...<br> The can't. As you probably realized all of the page are in the left gray thing, we call it legend. Adding the page to it is fairly simple and consists of these simple steps.</p>
+                <p>First open the <code>js/insert/legendDocs.js</code> or <code>js/insert/legendTuts.js</code> file (depends on what kind of page are you writing). As you by now probably realized, there is a <code>legend</code> variable and in it there is a HTML code for a legend.</p>
+                <p>There you can create new categories by using <code>h3</code> tag or just adding new pages to already existing one. Make a new list element with a <code>li</code> tag, inside of it put <code>a</code> tag leading to the page. But do not forgot about the <code>${lp}</code> element, it's critical for page to recognize this page.</p>
+                <p>After all of that your legend variable should look like this:</p>
+                <pre>
+let legend = `
+<h3>Category</h3>
+<nav>
+    <ul>
+        <!-- Pages -->
+        <li><a href="${lp}/tutorials/tutorials.html">Some page</a></li>
+        <li><a href="${lp}/tutorials/set-a-project.html">Your page</a></li>
+    </ul>
+</nav>
+<!-- Rest of the variable -->
+`;
+</pre>
+
+                <h3>Summary</h3>
+                <p>You've done it. You created your own documentation or tutorials page. Now you can pull it to the <code>main</code> branch of the repository.</p>
+                <p>From all of the Azurite-Docs contributors we all thank you for your willingness to create with us the Azurite Docs and being part of Azurite Engine community.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Insert the navigation legend and footer -->
+    <script src="../js/insert/legendTuts.js"></script>
+    <script src="../js/insert/footer.js"></script>
+
+    <script src="../js/syntaxHighlighting.js"></script>
+</body>
+
+</html>

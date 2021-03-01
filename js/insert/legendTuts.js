@@ -19,6 +19,14 @@ let legend = `
         
     </ul>
 </nav>
+
+<h3>Aside</h3>
+<nav>
+    <ul>
+        <!-- Pages -->
+        <li><a href="${lp}/tutorials/creating-docs.html">Creating docs</a></li>
+    </ul>
+</nav>
 `;
 
 function add (selector, html) {
