@@ -340,9 +340,8 @@
         animation: floatdown 0.5s;
         position: relative;
     }
-    /* Contributors page */
     
-    #con li {
+    .card li {
         list-style: circle;
         margin-left: 30px;
     }
