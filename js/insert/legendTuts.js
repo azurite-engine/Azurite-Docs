@@ -27,7 +27,7 @@ let legend = `
     </ul>
 </nav>
 
-<h3>Aside</h3>
+<h3>Contributing</h3>
 <nav>
     <ul>
         <!-- Pages -->
