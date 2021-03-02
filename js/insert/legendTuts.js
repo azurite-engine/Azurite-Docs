@@ -20,6 +20,13 @@ let legend = `
     </ul>
 </nav>
 
+<h3>Advanced Tutorials</h3>
+<nav>
+    <ul>
+        <li><a href="${lp}/tutorials/custom-renderer.html">A Custom Renderer</a></li>
+    </ul>
+</nav>
+
 <h3>Aside</h3>
 <nav>
     <ul>
