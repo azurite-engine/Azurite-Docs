@@ -20,14 +20,14 @@ let legend = `
     </ul>
 </nav>
 
-<h3>Advanced Tutorials</h3>
+<h3>Advanced</h3>
 <nav>
     <ul>
         <li><a href="${lp}/tutorials/custom-renderer.html">A Custom Renderer</a></li>
     </ul>
 </nav>
 
-<h3>Aside</h3>
+<h3>Contributing</h3>
 <nav>
     <ul>
         <!-- Pages -->

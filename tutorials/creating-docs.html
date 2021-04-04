@@ -93,7 +93,7 @@ setHeader("How to use the ECS", "Entity Component System.");
                 <p>First open the <code>js/insert/legendDocs.js</code> or <code>js/insert/legendTuts.js</code> file (depends on what kind of page are you writing). There is a <code>legend</code> variable containing the HTML code for the legend.</p>
                 <p>If necessary, you can create new categories by using <code>h3</code> tag, or just add your pages to existing categories.<br>
                 Make a new list element with a <code>li</code> tag, inside of it put <code>a</code> tag leading to the page you just created. <br>
-                <div class="warn">In the legend, it is critical to use root paths to your page, not relative paths. Also, do not forgot about the <code>${lp}</code> element, it appends the correct base URL depending where the page is being accessed from.<br>A good link will look similar to this: <code>&lt;li&gt;&lt;a href="${lp}/docs/blob.html">Blob&lt;/a&gt;&lt;/li&gt;</code></div></p>
+                <div class="warn">In the legend, it is critical to use root paths to your page, not relative paths. Also, do not forgot about the <code>${lp}</code> element, it appends the correct base URL depending where the page is being accessed from.<br>A good link will look similar to this: <code>&lt;li&gt;&lt;a href="${lp}/docs/blob.html">Foo&lt;/a&gt;&lt;/li&gt;</code></div></p>
                 <p>After all of that your legend variable should look like this:</p>
                 <pre class="syntax-java">
 let legend = `
