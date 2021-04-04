@@ -24,6 +24,7 @@ let legend = `
 <nav>
     <ul>
         <li><a href="${lp}/tutorials/custom-renderer.html">A Custom Renderer</a></li>
+        <li><a href="${lp}/tutorials/custom-post-process-step.html">A Custom Post Processing Step</a></li>
     </ul>
 </nav>
 
