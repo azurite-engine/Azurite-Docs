@@ -30,10 +30,10 @@
             <!-- Documentation Content -->
             <div class="card">
                 <h2>SpriteRenderer</h2>
-                <h4>Renders a Sprite for 2D graphics.</h4>
+                <p>Renders a Sprite for 2D graphics.</p>
 
                 <h3>Usage</h3>
-                <pre class="syntax-java">
+<pre class="syntax-java">
 public class Main extends Scene {
 
     GameObject mario = new GameObject(new Transform(600, 200, 50, 50), 2);
@@ -49,7 +49,30 @@ public class Main extends Scene {
 
     }
 }
-                </pre>
+</pre>
+
+                <h3>Public static methods.</h3>
+                <table>
+                    <tr>
+                        <th>Method</th><th>Parameters</th><th>Return</th><th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>getTexture</td><td></td><td>Texture</td><td>Returns the texture stored inside the Sprite</td>
+                    </tr>
+                    <tr>
+                        <td>getColor</td><td></td><td>Color</td><td>Returns the color or tint of the SpriteRenderer</td>
+                    </tr>
+                    <tr>
+                        <td>getColorVector</td><td></td><td>Vector4f</td><td>Returns the color or tint of the SpriteRenderer as a normalized Vector4f</td>
+                    </tr>
+                    <tr>
+                        <td>setAlpha</td> <td>float alpha</td> <td></td> <td>Returns the color or tint of the SpriteRenderer as a normalized Vector4f</td>
+                    </tr>
+
+
+                    <h2>AHHHH, this is too much work, lets make it even harder but less tedious by writing a web scraper :D</h2>
+ 
+                </table>
             </div>
         </div>
     </div>
