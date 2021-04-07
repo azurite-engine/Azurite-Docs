@@ -45,6 +45,14 @@ let legend = `
         <li><a href="${lp}/docs/structure.html">Structure of Azurite</a></li>
     </ul>
 </nav>
+
+<h3>Components</h3>
+<nav>
+    <ul>
+        <!-- Pages -->
+        <li><a href="${lp}/docs/SpriteRenderer.html">How the engine works</a></li>
+    </ul>
+</nav>
 `;
 
 function add (selector, html) {
