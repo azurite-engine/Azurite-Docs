@@ -19,7 +19,13 @@
             "Create the spriteRenderer using a color vector, no sprite."
         ]
     ],
-    "Fields": [],
+    "Fields": [
+        [
+            "<div class=\"danger\"><strong>[SCRAPER:WARNING]</strong> The JavaDoc Scraper was unable to find the any data for the fields table. Please manually add any missing data or remove this warning and table.</div>",
+            "",
+            ""
+        ]
+    ],
     "Methods": [
         [
             "Color",

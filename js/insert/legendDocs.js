@@ -1,3 +1,4 @@
+  
 /** 
  * Contains the links that are inserted into the HTML on load for documentation website
  */
@@ -37,7 +38,6 @@ let legend = `
         <li><a href="${lp}/docs/azurite-style.html">Code Style Guidelines</a></li>
     </ul>
 </nav>
-
 <h3>Working In Azurite</h3>
 <nav>
     <ul>
@@ -46,12 +46,22 @@ let legend = `
         <li><a href="${lp}/docs/structure.html">Structure of Azurite</a></li>
     </ul>
 </nav>
-
 <h3>Components</h3>
 <nav>
     <ul>
         <!-- Pages -->
         <li><a href="${lp}/docs/SpriteRenderer.html">How the engine works</a></li>
+    </ul>
+</nav>
+
+<h3>Generated</h3>
+<nav>
+    <ul>
+        <!-- Pages -->
+        <li><a href="${lp}/docs/SpriteRenderer.html">SpriteRenderer</a></li>
+        <li><a href="${lp}/docs/AABB.html">AABB</a></li>
+        <li><a href="${lp}/docs/Events.html">Events</a></li>
+        <li><a href="${lp}/docs/SpriteRenderer.html">SpriteRenderer</a></li>
     </ul>
 </nav>
 `;
@@ -62,5 +72,3 @@ function add (selector, html) {
 
 
 add('.legend-card', legend);
-
-

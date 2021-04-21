@@ -59,3 +59,16 @@ code {
 .documentation .title {
     color: white;
 }
+
+th {
+    /* border: 1px solid gray; */
+    border-collapse: collapse;
+    padding: 3px 7px;
+    color: cornflowerblue;
+    background: #2D2D2D;
+    text-align: left;
+}
+
+tr:nth-child(2n+1) {
+    background: #2b2b2b;
+}

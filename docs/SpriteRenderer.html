@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta className="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azurite Documentation</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="../js/getBaseURL.js"></script>
+</head>
+
+<body>
+    <!-- Insert the top navigation bar and welcome header -->
+    <script src="../js/insert/navbar.js"></script>
+    <!-- Insert the top navigation bar and welcome header -->
+    <script src="../js/insert/header.js"></script>
+
+    <script>
+        // Change these to the title of the documentation topic/item
+        setHeader("SpriteRenderer", "");
+    </script>
+
+    <!-- Documentation -->
+    <div class="documentation">
+        <div class="container grid contentparent" id="docs">
+            <!-- Documentation Legend -->
+            <div class="legend-card"></div>
+
+            <!-- Documentation Content -->
+            <div class="card">
+                <h2>SpriteRenderer</h2>
+                <p>SpriteRenderer is a component that can be added to a GameObject. it can contain a solid color, a semi-transparent color, or a texture. Sprites can be tinted by the color value.</p>
+                <pre class="syntax-java">
+//Paste example here
+                </pre>
+                <h3>Fields</h3>
+                <table>
+                    <tr><th>Type</th><th>Method</th><th>Functionality</th></tr>
+                    <tr><td><div class="danger"><strong>[SCRAPER:WARNING]</strong> The JavaDoc Scraper was unable to find the any data for the fields table. Please manually add any missing data or remove this warning and table.</div></td><td></td><td></td></tr>
+                </table>
+                <h3>Methods</h3>
+                <table>
+                    <tr><th>Type</th><th>Method</th><th>Functionality</th></tr>
+                    <tr><td>Color</td><td>getColor()</td><td></td></tr>
+                    <tr><td>org.joml.Vector4f</td><td>getColorVector()</td><td></td></tr>
+                    <tr><td>org.joml.Vector2f[]</td><td>getTexCoords()</td><td></td></tr>
+                    <tr><td>Texture</td><td>getTexture()</td><td></td></tr>
+                    <tr><td>boolean</td><td>isDirty()</td><td>Used by the renderer to determine if this sprite should be sent back to the GPU to be redrawn.</td></tr>
+                    <tr><td>void</td><td>setAlpha(float a)</td><td>Change the alpha/opacity of the sprite and/or color</td></tr>
+                    <tr><td>void</td><td>setClean()</td><td>Used by the renderer to reset the state of the SpriteRenderer to clean.</td></tr>
+                    <tr><td>void</td><td>setColor(Color color)</td><td>Change the color by passing a Color object, converting it to a normalized Vector4f.</td></tr>
+                    <tr><td>void</td><td>setColor(org.joml.Vector4f color)</td><td>Change the color by passing a Vector4f</td></tr>
+                    <tr><td>void</td><td>setSprite(Sprite sprite)</td><td>Change the sprite contained in the SpriteRenderer Component.</td></tr>
+                    <tr><td>void</td><td>setTexture(Texture texture)</td><td>Set the texture of the Sprite if reqd.</td></tr>
+                    <tr><td>void</td><td>start()</td><td>Initialize the Component, called once after creation by the parent GameObject.</td></tr>
+                    <tr><td>void</td><td>update(float dt)</td><td>Update method called every frame by parent GameObject</td></tr>
+                </table>
+                <h3>Constructor</h3>
+                <table>
+                    <tr><th>Constructor</th><th>Functionality</th></tr>
+                    <tr><td>SpriteRenderer(Sprite sprite)</td><td>Create a spriteRenderer using a sprite that is already loaded.</td></tr>
+                    <tr><td>SpriteRenderer(Color color)</td><td>Create the spriteRenderer using a Color object, no sprite.</td></tr>
+                    <tr><td>SpriteRenderer(java.lang.String path)</td><td>Create a spriteRenderer using an image from the fileSystem.</td></tr>
+                    <tr><td>SpriteRenderer(org.joml.Vector4f color)</td><td>Create the spriteRenderer using a color vector, no sprite.</td></tr>
+                </table>
+
+             </div>
+        </div>
+    </div>
+
+    <!-- Insert the navigation legend and footer -->
+    <script src="../js/insert/legendDocs.js"></script>
+    <script src="../js/insert/footer.js"></script>
+
+    <script src="../js/syntaxHighlighting.js"></script>
+</body>
+
+</html>
