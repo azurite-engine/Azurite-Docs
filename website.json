@@ -1,0 +1,90 @@
+{
+    "Title": "SpriteRenderer",
+    "Description": "SpriteRenderer is a component that can be added to a GameObject. it can contain a solid color, a semi-transparent color, or a texture. Sprites can be tinted by the color value.",
+    "Constructors": [
+        [
+            "SpriteRenderer(Sprite sprite)",
+            "Create a spriteRenderer using a sprite that is already loaded."
+        ],
+        [
+            "SpriteRenderer(Color color)",
+            "Create the spriteRenderer using a Color object, no sprite."
+        ],
+        [
+            "SpriteRenderer(java.lang.String path)",
+            "Create a spriteRenderer using an image from the fileSystem."
+        ],
+        [
+            "SpriteRenderer(org.joml.Vector4f color)",
+            "Create the spriteRenderer using a color vector, no sprite."
+        ]
+    ],
+    "Fields": [],
+    "Methods": [
+        [
+            "Color",
+            "getColor()",
+            ""
+        ],
+        [
+            "org.joml.Vector4f",
+            "getColorVector()",
+            ""
+        ],
+        [
+            "org.joml.Vector2f[]",
+            "getTexCoords()",
+            ""
+        ],
+        [
+            "Texture",
+            "getTexture()",
+            ""
+        ],
+        [
+            "boolean",
+            "isDirty()",
+            "Used by the renderer to determine if this sprite should be sent back to the GPU to be redrawn."
+        ],
+        [
+            "void",
+            "setAlpha(float a)",
+            "Change the alpha/opacity of the sprite and/or color"
+        ],
+        [
+            "void",
+            "setClean()",
+            "Used by the renderer to reset the state of the SpriteRenderer to clean."
+        ],
+        [
+            "void",
+            "setColor(Color color)",
+            "Change the color by passing a Color object, converting it to a normalized Vector4f."
+        ],
+        [
+            "void",
+            "setColor(org.joml.Vector4f color)",
+            "Change the color by passing a Vector4f"
+        ],
+        [
+            "void",
+            "setSprite(Sprite sprite)",
+            "Change the sprite contained in the SpriteRenderer Component."
+        ],
+        [
+            "void",
+            "setTexture(Texture texture)",
+            "Set the texture of the Sprite if reqd."
+        ],
+        [
+            "void",
+            "start()",
+            "Initialize the Component, called once after creation by the parent GameObject."
+        ],
+        [
+            "void",
+            "update(float dt)",
+            "Update method called every frame by parent GameObject"
+        ]
+    ]
+}
