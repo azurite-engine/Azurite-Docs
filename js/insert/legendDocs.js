@@ -34,6 +34,7 @@ let legend = `
         <li><a href="${lp}/index.html">Introduction</a></li>
         <li><a href="${lp}/docs/contributing.html">Contributing</a></li>
         <li><a href="${lp}/docs/contributors.html">Contributors</a></li>
+        <li><a href="${lp}/docs/azurite-style.html">Code Style Guidelines</a></li>
     </ul>
 </nav>
 
