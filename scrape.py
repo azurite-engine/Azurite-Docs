@@ -4,6 +4,8 @@ import requests
 import json
 import re
 import sys
+import platform
+import os
 
 # Setup
 try:
@@ -87,3 +89,17 @@ with open("website.json", "w") as f:
 
 print(Fore.GREEN + "[SCRAPER:SUCCESS] Done, saved to website.json")
 print(Style.RESET_ALL)
+
+OS = platform.system()
+
+print("[GENERATOR:INFO] Detected OS is " + OS + ", running generator.")
+try:
+    if OS == "Linux":
+        os.system("./AzuriteGenerator-linux")
+    elif OS == "Darwin":
+        os.system("./AzuriteGenerator-macos")
+    elif OS == "Windows":
+        os.system("AzuriteGenerator.exe")
+    print(Fore.GREEN + "[GENERATOR:SUCCESS] Sucessfully called the generator executable")
+except:
+    print(Fore.RED + "[GENERATOR:FATAL] Failed to call the generator executable.")
