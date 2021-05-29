@@ -3,14 +3,20 @@
 let ec = [
     "Asher",
     "Gabe",
-    "VoxelRifts"
+    "VoxelRifts",
+    "goldspark",
+    "IAmTree",
+    "Pricter",
+    "aemogie",
+    "gvicentin"
 ];
 
 // Documentation contributors
 let dc = {
     Tree : "Light theme, site design, documentation author",
     Asher : "Dark theme, JS, documentation author",
-    Carson : "CSS animations, layout tweaks"
+    Carson : "CSS animations, layout tweaks",
+    Pricter: "Tweaked Changes"
 };
 
 // Credits
