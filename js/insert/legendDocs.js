@@ -1,4 +1,4 @@
-  
+    
 /** 
  * Contains the links that are inserted into the HTML on load for documentation website
  */
@@ -61,7 +61,6 @@ let legend = `
         <li><a href="${lp}/docs/SpriteRenderer.html">SpriteRenderer</a></li>
         <li><a href="${lp}/docs/AABB.html">AABB</a></li>
         <li><a href="${lp}/docs/Events.html">Events</a></li>
-        <li><a href="${lp}/docs/SpriteRenderer.html">SpriteRenderer</a></li>
     </ul>
 </nav>
 `;
