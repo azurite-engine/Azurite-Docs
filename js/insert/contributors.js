@@ -1,58 +1,87 @@
+let apiURL = "https://api.github.com/repos/Games-With-Gabe-Community/Azurite/contributors?q=contributions&order=desc"
 
-// Engine Contributors
-let ec = [
-    "Asher",
-    "Gabe",
-    "VoxelRifts"
-];
+async function getapi(url) {
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    if (response) {
+        hideloader();
+    }
+    show(data);
+}
 
-// Documentation contributors
-let dc = {
-    Tree : "Light theme, site design, documentation author",
-    Asher : "Dark theme, JS, documentation author",
-    Carson : "CSS animations, layout tweaks"
-};
+function hideloader() {
+    // document.getElementById('loading').style.display = 'none';
+}
+
+// Manually added list
+let ml = [
+    "carsonBurke"
+]
 
 // Credits
 let c = {
     LWJGL : "Used to interface with openGL and GLFW"
 };
 
-// License
-let l = `
-Copyright (c) 2021 GWG Community<br><br>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:<br><br>
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.<br><br>
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.`;
 
 function loadContributors () {
-    var list = ``;
-    list += `<h3>Engine</h3><ul>\n`;
-    for (const i in ec) {
-        list += `<li>${ec[i]}</li>\n`;
-    }
-    list += `</ul>\n\n`;
+    getapi(apiURL);
+}
 
-    list += `<br><h3>Documentation</h3><ul>\n`;
-    for (const i in dc) {
-        list += `<li>${i} - ${dc[i]}.</li>\n`;
+async function show (data2) {
+    var list = ``;
+    // list += `<h3>Thanks to</h3>\n`;
+
+    const response = await fetch(`https://api.github.com/orgs/Games-With-Gabe-Community/members`);
+    var data = await response.json();
+
+    list += `<h4>Managers</h4>`
+    for (const i in data) {
+        // list += `<li>${data[i].login}</li>\n`;
+        list += 
+        `
+        <a target="_blank" classs="contribUser" href="${data[i].html_url}"><div>
+            <img height="40px" src="${data[i].avatar_url}"></img>
+            <span>${data[i].login}</span>
+        </div></a>
+        `
+    }    
+
+    list += `<br><h4>Contributors</h4>`
+    var block = false
+    for (const i in data2) {
+        for (const j in data) {
+            if (data[j].login == data2[i].login) {
+                block = true
+            }
+        }
+        if (!block) {
+            list += 
+            `
+            <a target="_blank" classs="contribUser" href="${data2[i].html_url}"><div>
+                <img height="40px" src="${data2[i].avatar_url}"></img>
+                <span>${data2[i].login}</span>
+            </div></a>
+            `
+        }
+        block = false
+    }    
+
+    for (const i in ml) {
+        const response = await fetch(`https://api.github.com/users/${ml[i]}`);
+        var data = await response.json();
+        list += 
+        `
+        <a target="_blank" classs="contribUser" href="${data.html_url}"><div>
+            <img height="40px" src="${data.avatar_url}"></img>
+            <span>${data.login}</span>
+        </div></a>
+        `
     }
-    list += `</ul>\n\n`;
 
     list += `<br><h3>Credits</h3><ul>\n`;
     for (const i in c) {
@@ -60,7 +89,8 @@ function loadContributors () {
     }
     list += `</ul>\n\n`;
 
-    list += `<br><h3>MIT License</h3>${l}<br><br>`;
+    list += `<br>
+    <p>If you are interested in contributing, please check out the <a href="https://github.com/Games-With-Gabe-Community/Azurite/blob/main/CONTRIBUTING.md">contributing guidelines</a></p>`;
 
     document.querySelector("#con").innerHTML += list;
 }

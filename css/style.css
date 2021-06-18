@@ -89,6 +89,22 @@
         color: white;
         background-color: #2D2D2D;
     }
+
+    #con > a > div {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+
+    #con > a > div > img {
+        border-radius: 50%;
+        background: grey;
+    }
+
+    #con > a > div > span {
+        padding-left:10px;
+    }
+
     /* Navigation Bar */
     
     .logo {
@@ -191,6 +207,12 @@
         border-radius: 6px;
         animation: floattop 1.1s;
         position: relative;
+    }
+
+    @media(max-width: 1070px) {
+        .contentparent {
+            width: 100%;
+        }
     }
     /* Docs */
 
@@ -476,7 +498,7 @@
             padding: 0px;
         }
         .legend-card {
-            width: 75%;
+            width: 100%;
             margin: 0px auto;
         }
         .footer p {
