@@ -1,4 +1,6 @@
 # Azurite Docs
-Documentation website for [Azurite](https://github.com/Games-With-Gabe-Community/Azurite) Engine<br/>
-Guide on how to make your own pages: [Guide](https://games-with-gabe-community.github.io/Azurite-Docs/tutorials/creating-docs.html)<br/>
-You can see the page [here](https://games-with-gabe-community.github.io/Azurite-Docs/)
+Link to documentation site: [here](https://azurite-engine.github.io/Azurite-Docs/)
+
+Engine repository: [Azurite](https://github.com/azurite-engine/Azurite) Engine<br/>
+Guide to making your own pages: [Guide](https://azurite-engine.github.io/Azurite-Docs/tutorials/creating-docs.html)<br/>
+
