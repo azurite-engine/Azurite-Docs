@@ -1,4 +1,4 @@
-let apiURL = "https://api.github.com/repos/Games-With-Gabe-Community/Azurite/contributors?q=contributions&order=desc"
+let apiURL = "https://api.github.com/repos/azurite-engine/Azurite/contributors?q=contributions&order=desc"
 
 async function getapi(url) {
     // Storing response
@@ -36,7 +36,7 @@ async function show (data2) {
     var list = ``;
     // list += `<h3>Thanks to</h3>\n`;
 
-    const response = await fetch(`https://api.github.com/orgs/Games-With-Gabe-Community/members`);
+    const response = await fetch(`https://api.github.com/orgs/azurite-engine/members`);
     var data = await response.json();
 
     list += `<h4>Managers</h4>`
@@ -90,7 +90,7 @@ async function show (data2) {
     list += `</ul>\n\n`;
 
     list += `<br>
-    <p>If you are interested in contributing, please check out the <a href="https://github.com/Games-With-Gabe-Community/Azurite/blob/main/CONTRIBUTING.md">contributing guidelines</a></p>`;
+    <p>If you are interested in contributing, please check out the <a href="https://github.com/azurite-engine/Azurite/blob/main/CONTRIBUTING.md">contributing guidelines</a></p>`;
 
     document.querySelector("#con").innerHTML += list;
 }
