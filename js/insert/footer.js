@@ -13,7 +13,7 @@ let footer = `
         <nav>
             <ul class="flexbox">
                 <li><a href="https://discord.gg/dhyV3BXkRZ" target="_blank">Discord</a></li>
-                <li><a href="https://github.com/Games-With-Gabe-Community" target="_blank">Github</a></li>
+                <li><a href="https://github.com/azurite-engine" target="_blank">Github</a></li>
                 <li><a href="https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw" target="_blank">YouTube</a></li>
 
                 
