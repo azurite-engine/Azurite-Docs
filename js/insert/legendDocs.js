@@ -33,9 +33,10 @@ let legend = `
     <ul>
         <!-- Pages -->
         <li><a href="${lp}/index.html">Introduction</a></li>
-        <li><a href="${lp}/docs/contributing.html">Contributing</a></li>
-        <li><a href="${lp}/docs/contributors.html">Contributors</a></li>
-        <li><a href="${lp}/docs/azurite-style.html">Code Style Guidelines</a></li>
+        <li><a href="${lp}/docs/roadmap.html">Roadmap<li>
+       <li><a href="${lp}/docs/contributors.html">Contributors</a></li>
+        <li><a href="${lp}/docs/contributing.html">Contributing Guide</a></li>
+        <li><a href="${lp}/docs/azurite-style.html">Code Style</a></li>
     </ul>
 </nav>
 <h3>Working In Azurite</h3>
@@ -61,7 +62,6 @@ let legend = `
         <li><a href="${lp}/docs/SpriteRenderer.html">SpriteRenderer</a></li>
         <li><a href="${lp}/docs/AABB.html">AABB</a></li>
         <li><a href="${lp}/docs/Events.html">Events</a></li>
-        <li><a href="${lp}/docs/SpriteRenderer.html">SpriteRenderer</a></li>
     </ul>
 </nav>
 `;
