@@ -32,8 +32,206 @@
         <!-- Documentation Content -->
         <div class="card" id="con">
 <!--           <h1></h1> -->
-          <p>Rendering: &bull;Primitives oCircles/ellipses oLines oTriangles and rectangles oCustom shapes (defined vertices) &bull;Transparency and alpha blending &bull;Post processing oBlur, bloom, etc oCan be applied to the entire window, or localized to a texture &bull;Textures oLoading from PNG, maybe JPG oPossibly automatically add to a font atlas so save GPU texture slots GPUs are not guaranteed to have any more than 16 texture slots &bull;Primitives and textures should be transformable and rotatable relative to an anchor point (currently top-left) &bull;Font rendering oLoad from TTF files oSupport dynamic colors, positions, font size, and anchor points (left, middle, right) oFast redraw when text is changed Entity Components (these are only systems that are directly related to GameObjects &ndash; Not every system should be a tied to a GameObject as is popular in engines like Unity) &bull;SpriteRenderer ocan be passed: Sprite (texture) Primitive Animation (sequence of Sprites) &bull;CharacterController oTake input from keyboard/mouse or controllers oTop down or side scroll controls oMust work with physics if the parent GameObject has a Physics based component oAllow the end user to change aspects of the controller such as speed, keybinds, etc &bull;PointLight oOption to cast shadows using physics layer system oDynamic color and size &bull;SoundEmitter oEmits sound in world space &bull;Physics components oAll physics components have are assigned one or more physics layers, and one or more layer masks (layers that they check against) oRigidBody - Represents a rigid body with a fixed shape but changeable position. Static collider &bull;Represents a rigid body with a fixed shape and fixed position. oSoftBody &ndash; Represents a soft body with a changeable position This is a maybe if Juyas feels like it &bull;Collision callbacks (call a method if a collision has occurred) Sound &bull;Cannot be thread blocking (maybe it needs to be multithreaded) &bull;Ambient sound (not affected by the world or physics) &bull;Spatial sound oVolume level and maybe stereo volume determined by camera position and the position of the object emitting sound Input &bull;Keyboard input oSupports multi key/button input okeyPressed &ndash; a key is currently being pressed okeyReleased &ndash; a key was held for any amount of time and has just been released (only returns true for one frame) okeyDown &ndash; returns true if a key is was just pressed, then returns false until the key is released and pressed again. okeyHeld &ndash; returns true if a key has been held for multiple frames ostruct or class containing easy to use aliases for keys (ie. &ldquo;a&rdquo;, &ldquo;A&rdquo;, &ldquo;left arrow key&rdquo;, &ldquo;&agrave;&rdquo;, &ldquo;&ocirc;&rdquo;, &ldquo;left shift&rdquo;, etc.) &bull;Mouse Input oMouse position as Vector2 omouseButtonPressed &ndash; a mouse button is currently being pressed omouseButtonReleased &ndash; a mouse button was held for any amount of time and has just been released (only returns true for one frame) omouseDragged &ndash; returns true if the mouse is being dragged omouseButtonDown &ndash; returns true if a mouse button was just pressed, then returns false until the button is released and pressed again. &bull;GamePad Input oMulti-controller support oXbox or PS controllers obuttonPressed &ndash; a controller button is currently being pressed obuttonReleased &ndash; a controller button was held for any amount of time and has just been released (only returns true for one frame) obuttonDown &ndash; returns true if a mouse button was just pressed, then returns false until the button is released and pressed again. ogetAxis &ndash; return the dead-zoned value from a given axis ogetAxisRaw &ndash; return the raw value from a given axis ostruct or class containing easy to use aliases for buttons/axis (ie. &ldquo;A&rdquo;, &ldquo;Y&rdquo;, &ldquo;left trigger&rdquo;, &ldquo;TRIANGLE&rdquo;, etc.) User Interface &bull;Font rendering &bull;Note that although it will be used very similarly to HTML and CSS, it is not, and it will not be as complex&hellip; do not expect everything from HTML and CSS, we just want a very small subset of features &bull;HTML like UI oBasic UI components Button Slider Text Input Dropdown menu Sprite Radio select Checkbox select oUI containers &ndash; contain child UI components or containers Can be thought of as a</p>
-<div>or <span>&nbsp;Children component positions are relative to the parent container &bull;Style Sheets &ndash; CSS like definitions for basic styling and layouts oUnits px &ndash; pixels vw &ndash; viewport width vh &ndash; viewport height % &ndash; percent of parent container oPositioning information text-align float padding margin z-index position: absolute/relative (maybe); ostyling information background-color: HEX, RGBA, RGB; background-sprite: &ldquo;src/assets/path/to/asset.png&rdquo;; background-blur: 0-1; blurs content behind the element if not opaque border-radius: ; color: HEX, RGBA, RGB; border: px color; (ex: border: 2px white;) display: none; oselection modifiers :hover { :active {&nbsp;</span></div>
+
+          <p><strong>Rendering:</strong></p>
+          <ul>
+          <li>Primitives
+          <ul>
+          <li>Circles/ellipses</li>
+          <li>Lines</li>
+          <li>Triangles and rectangles</li>
+          <li>Custom shapes (defined vertices)</li>
+          </ul>
+          </li>
+          <li>Transparency and alpha blending</li>
+          <li>Post processing
+          <ul>
+          <li>Blur, bloom, etc</li>
+          <li>Can be applied to the entire window, or localized to a texture</li>
+          </ul>
+          </li>
+          <li>Textures
+          <ul>
+          <li>Loading from PNG, maybe JPG</li>
+          <li>Possibly automatically add to a font atlas so save GPU texture slots
+          <ul>
+          <li>GPUs are not guaranteed to have any more than 16 texture slots</li>
+          </ul>
+          </li>
+          <li>Primitives and textures should be transformable and rotatable relative to an anchor point (currently top-left)</li>
+          <li>Font rendering
+          <ul>
+          <li>Load from TTF files</li>
+          <li>Support dynamic colors, positions, font size, and anchor points (left, middle, right)</li>
+          <li>Fast redraw when text is changed</li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          <p><strong>Entity Components </strong></p>
+          <p>(these are only systems that are directly related to GameObjects &ndash; Not every system should be a tied to a GameObject as is popular in engines like Unity)</p>
+          <ul>
+          <li>SpriteRenderer
+          <ul>
+          <li>can be passed:
+          <ul>
+          <li>Sprite (texture)</li>
+          <li>Primitive</li>
+          <li>Animation (sequence of Sprites)</li>
+          </ul>
+          </li>
+          <li>CharacterController
+          <ul>
+          <li>Take input from keyboard/mouse or controllers</li>
+          <li>Top down or side scroll controls</li>
+          <li>Must work with physics if the parent GameObject has a Physics based component</li>
+          <li>Allow the end user to change aspects of the controller such as speed, keybinds, etc</li>
+          </ul>
+          </li>
+          <li>PointLight
+          <ul>
+          <li>Option to cast shadows using physics layer system</li>
+          <li>Dynamic color and size</li>
+          </ul>
+          </li>
+          <li>SoundEmitter
+          <ul>
+          <li>Emits sound in world space</li>
+          </ul>
+          </li>
+          <li>Physics components
+          <ul>
+          <li>All physics components have are assigned one or more physics layers, and one or more layer masks (layers that they check against)</li>
+          <li>RigidBody - Represents a rigid body with a fixed shape but changeable position.
+          <ul>
+          <li>Static collider
+          <ul>
+          <li>Represents a rigid body with a fixed shape and fixed position.</li>
+          </ul>
+          </li>
+          <li>SoftBody &ndash; Represents a soft body with a changeable position
+          <ul>
+          <li>This is a maybe if Juyas feels like it</li>
+          </ul>
+          </li>
+          <li>Collision callbacks (call a method if a collision has occurred)</li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          <p><strong>Sound</strong></p>
+          <ul>
+          <li>Cannot be thread blocking (maybe it needs to be multithreaded)</li>
+          <li>Ambient sound (not affected by the world or physics)</li>
+          <li>Spatial sound
+          <ul>
+          <li>Volume level and <em>maybe</em> stereo volume determined by camera position and the position of the object emitting sound</li>
+          </ul>
+          </li>
+          </ul>
+          <p><strong>Input</strong></p>
+          <ul>
+          <li>Keyboard input
+          <ul>
+          <li>Supports multi key/button input</li>
+          <li>keyPressed &ndash; a key is currently being pressed</li>
+          <li>keyReleased &ndash; a key was held for any amount of time and has just been released (only returns true for one frame)</li>
+          <li>keyDown &ndash; returns true if a key is was just pressed, then returns false until the key is released and pressed again.</li>
+          <li>keyHeld &ndash; returns true if a key has been held for multiple frames</li>
+          <li>struct or class containing easy to use aliases for keys (ie. &ldquo;a&rdquo;, &ldquo;A&rdquo;, &ldquo;left arrow key&rdquo;, &ldquo;&agrave;&rdquo;, &ldquo;&ocirc;&rdquo;, &ldquo;left shift&rdquo;, etc.)</li>
+          </ul>
+          </li>
+          <li>Mouse Input
+          <ul>
+          <li>Mouse position as Vector2</li>
+          <li>mouseButtonPressed &ndash; a mouse button is currently being pressed</li>
+          <li>mouseButtonReleased &ndash; a mouse button was held for any amount of time and has just been released (only returns true for one frame)</li>
+          <li>mouseDragged &ndash; returns true if the mouse is being dragged</li>
+          <li>mouseButtonDown &ndash; returns true if a mouse button was just pressed, then returns false until the button is released and pressed again.</li>
+          </ul>
+          </li>
+          <li>GamePad Input
+          <ul>
+          <li>Multi-controller support</li>
+          <li>Xbox or PS controllers</li>
+          <li>buttonPressed &ndash; a controller button is currently being pressed</li>
+          <li>buttonReleased &ndash; a controller button was held for any amount of time and has just been released (only returns true for one frame)</li>
+          <li>buttonDown &ndash; returns true if a mouse button was just pressed, then returns false until the button is released and pressed again.</li>
+          <li>getAxis &ndash; return the dead-zoned value from a given axis</li>
+          <li>getAxisRaw &ndash; return the raw value from a given axis</li>
+          <li>struct or class containing easy to use aliases for buttons/axis (ie. &ldquo;A&rdquo;, &ldquo;Y&rdquo;, &ldquo;left trigger&rdquo;, &ldquo;TRIANGLE&rdquo;, etc.)</li>
+          </ul>
+          </li>
+          </ul>
+          <p><strong>User Interface</strong></p>
+          <ul>
+          <li>Font rendering</li>
+          <li>Note that although it will be used very similarly to HTML and CSS, it is not, and it will not be as complex&hellip; do not expect everything from HTML and CSS, we just want a very small subset of features</li>
+          <li>HTML like UI
+          <ul>
+          <li>Basic UI components
+          <ul>
+          <li>Button</li>
+          <li>Slider</li>
+          <li>Text Input</li>
+          <li>Dropdown menu</li>
+          <li>Sprite</li>
+          <li>Radio select</li>
+          <li>Checkbox select</li>
+          </ul>
+          </li>
+          <li>UI containers &ndash; contain child UI components or containers
+          <ul>
+          <li>Can be thought of as a &lt;div&gt; or &lt;span&gt;</li>
+          <li>Children component positions are relative to the parent container</li>
+          </ul>
+          </li>
+          <li>Style Sheets &ndash; CSS like definitions for <em>basic</em> styling and layouts
+          <ul>
+          <li>Units
+          <ul>
+          <li>px &ndash; pixels</li>
+          <li>vw &ndash; viewport width</li>
+          <li>vh &ndash; viewport height</li>
+          <li>% &ndash; percent of parent container</li>
+          </ul>
+          </li>
+          <li>Positioning information
+          <ul>
+          <li>text-align</li>
+          <li>float</li>
+          <li>padding</li>
+          <li>margin</li>
+          <li>z-index</li>
+          <li>position: absolute/relative (maybe);</li>
+          </ul>
+          </li>
+          <li>styling information
+          <ul>
+          <li>background-color: HEX, RGBA, RGB;</li>
+          <li>background-sprite: &ldquo;src/assets/path/to/asset.png&rdquo;;</li>
+          <li>background-blur: 0-1; blurs content behind the element if not opaque</li>
+          <li>border-radius: ;</li>
+          <li>color: HEX, RGBA, RGB;</li>
+          <li>border: px color; (ex: border: 2px white;)</li>
+          <li>display: none;</li>
+          </ul>
+          </li>
+          <li>selection modifiers
+          <ul>
+          <li>:hover {</li>
+          <li>:active {</li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
           <br>
         </div>
       </div>
