@@ -36,8 +36,8 @@ let navbar = `
         </div>
         <nav>
             <ul>
-                <li><a href="${lp}/index.html">Docs</a></li>
-                <li><a href="${lp}/tutorials/tutorials.html">Tutorials</a></li>
+                <li><a href="https://azurite-engine.github.io/Azurite-docfx/api/index.html">API Documentation</a></li>
+                <li><a href="${lp}/index.html">Old Docs</a></li>
                 <li><a href="https://azurite-engine.github.io/azurite-javadocs/" target="_blank">Javadocs</a></li>
             </ul>
         </nav>
