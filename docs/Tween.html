@@ -35,7 +35,18 @@
                    Great for moving platforms or moving AI to exact spot for desired time.
                    Also great for changing values of any property including colors and size</p>
                 <pre class="syntax-java">
-//Paste example here
+EXAMPLE: Adds all tween modes and plays them only once!
+
+gameObject.addComponent(new Tween());
+
+if(!gameObject.getComponent(Tween.class).tweenFinishedAll()) {
+            gameObject.getComponent(Tween.class).setUpTweenPosition( new Vector2f(gameObject.getPositionData()[0], gameObject.getPositionData()[1]), new Vector2f(800, 600), 2, Tween.TweenMode.EASING_IN);
+            gameObject.getComponent(Tween.class).setUpTweenPosition( new Vector2f(800, 600), new Vector2f(gameObject.getPositionData()[0], gameObject.getPositionData()[1]), 2, Tween.TweenMode.EASING_OUT);
+            gameObject.getComponent(Tween.class).setUpTweenPosition( new Vector2f(gameObject.getPositionData()[0], gameObject.getPositionData()[1]), new Vector2f(800, 600), 1, Tween.TweenMode.NO_EASING);
+            gameObject.getComponent(Tween.class).setUpTweenPosition( new Vector2f(800, 600), new Vector2f(gameObject.getPositionData()[0], gameObject.getPositionData()[1]), 1, Tween.TweenMode.EASING_IN_OUT);
+
+            gameObject.getComponent(Tween.class).play();
+        }
                 </pre>
                 <h3>Fields</h3>
                 <table>
@@ -47,7 +58,7 @@
                     <tr><th>Type</th><th>Method</th><th>Functionality</th></tr>
                     <tr><td>boolean</td><td>tweenFinished()</td><td>Checks whether current tween that is being processed has finished.</td></tr>
                     <tr><td>boolean</td><td>tweenFinishedAll()</td><td>Checks whether all of the tweens have finished</td></tr>
-                    <tr><td>void</td><td>play()</td><td>Start all of the tweens. MUST USE <b>setUpTween()</b> first!</td></tr>
+                    <tr><td>void</td><td>play()</td><td>Start all of the tweens. MUST USE <b>setUpTweenPosition()</b> or <b>setUpTweenObject()</b> first!</td></tr>
                     <tr><td>void</td><td>setUpTweenPosition(Vector2f startPos, Vector2f target, float duration, TweenMode tweenMode)</td><td>Smoothly moves object from start position to target in desired time</td></tr>
                     <tr><td>void</td><td>setUpTweenObject(Vector2f object, Vector2f startVal, Vector2f endVal, float duration, TweenMode tweenMode)</td><td>Smoothly changes object value from startVal to endVal</td></tr>
                 </table>
